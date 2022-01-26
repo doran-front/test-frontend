@@ -8,6 +8,7 @@ function App() {
     console.log("ddddd");
     console.log("에러를 확인함");
     console.log("다시확인하기앙러아러아러아러아렁라어라얼아러아ㅓ랑러");
+    console.log("pull request!!!");
   };
 
   dongsu();
