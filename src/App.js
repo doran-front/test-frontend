@@ -2,6 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const dongsu = () => {
+    console.log("소영님 예민...");
+  };
+
+  dongsu();
   return (
     <div className="App">
       <header className="App-header">
