@@ -10,6 +10,7 @@ function App() {
     console.log("다시확인하기앙러아러아러아러아렁라어라얼아러아ㅓ랑러");
     console.log("pull request!!!");
     console.log("owner/member 확인 중!");
+    console.log("owner/member 확인 중!!!!!!!!");
   };
 
   dongsu();
