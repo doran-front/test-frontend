@@ -5,7 +5,7 @@ function App() {
   const dongsu = () => {
     console.log("소영님 예민...");
     console.log("넹....넹....넹...넹...");
-    console.log("여기..에러");
+    console.log('ddddd');
   };
 
   dongsu();
