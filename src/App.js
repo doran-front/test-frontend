@@ -7,6 +7,7 @@ function App() {
     console.log("넹....넹....넹...넹...");
     console.log('ddddd');
     console.log("에러를 확인함");
+    console.log("pull request!!!");
   };
 
   dongsu();
