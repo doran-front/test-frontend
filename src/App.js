@@ -8,6 +8,7 @@ function App() {
     console.log('ddddd');
     console.log("에러를 확인함");
     console.log("pull request!!!");
+    console.log("owner/member 확인 중");
   };
 
   dongsu();
