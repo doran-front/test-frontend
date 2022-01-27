@@ -11,7 +11,7 @@ main="main"
 
 if [ $local_branch != $master -a $local_branch != $main ]
 then
-  echo "GIT 브랜치 이름 \${local_branch}"
+  echo "GIT 브랜치 이름 ${local_branch}"
   echo "complete commit"
 else
   echo "master , main 브랜치에서는 commit 할 수 없습니다."
