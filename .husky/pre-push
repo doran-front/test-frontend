@@ -1,22 +1,23 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-echo -e "===\n>> Talenavi Pre-push Hook: Checking branch name / Mengecek nama branch..."
-
-BRANCH=`git rev-parse --abbrev-ref HEAD`
-PROTECTED_BRANCHES="^(master|develop)"
-
-if [[ $1 != *"$BRANCH"* ]]
+​
+FORBIDDEN_HTTPS_URL="https://github.com/doran-front/test-frontend.git" # insert your remote url (https)
+FORBIDDEN_REF="refs/heads/main" # insert branch ref
+​
+remote="$1"
+url="$2"
+​
+if [ "$url" != "$FORBIDDEN_HTTPS_URL" ]
 then
-  echo -e "\n🚫 You must use (git push origin $BRANCH) / Anda harus menggunakan (git push origin $BRANCH).\n" && exit 1
+    exit 0 # Forked Project 에서는 제한하지 않음
 fi
-
-if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
+​
+if read local_ref local_sha remote_ref remote_sha
 then
-  echo -e "\n🚫 Cannot push to remote $BRANCH branch, please create your own branch and use PR."
-  echo -e "🚫 Tidak bisa push ke remote branch $BRANCH, silahkan buat branch kamu sendiri dan gunakan pull request.\n" && exit 1
+    if [ "$remote_ref" == "$FORBIDDEN_REF" ]
+    then
+        echo "DO NOT PUSH it master"
+        exit 1 # 금지된 ref 로 push 를 실행하면 에러
+    fi
 fi
-
-echo -e ">> Finish checking branch name / Selesai mengecek nama branch.\n==="
-
+​
 exit 0
