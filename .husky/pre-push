@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo -e "===\n>> Talenavi Pre-push Hook: Checking branch name / Mengecek nama branch..."
-
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 PROTECTED_BRANCHES="^(master|develop)"
 
