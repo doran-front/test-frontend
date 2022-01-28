@@ -10,9 +10,8 @@ function App() {
     console.log("에러를 확인함");
     console.log("에러를 확인함");
     console.log("에러를 확인함");
-    console.log("에러를 확인함");
-    console.log("에러를 확인함");
-    console.log("에러를 확인함");
+    console.log('as');
+    console.log("eslint");;;;;;;
   };
 
   dongsu();
