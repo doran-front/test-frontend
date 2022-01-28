@@ -4,4 +4,8 @@
     "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
