@@ -6,8 +6,6 @@ function App() {
   const dongsu = () => {
     console.log("ddddd");
     console.log("에러를 확인함");
-    console.log("에러를 확인함");
-    console.log("에러를 확인함");
   };
 
   dongsu();
