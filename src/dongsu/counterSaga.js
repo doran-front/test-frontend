@@ -1,5 +1,30 @@
 import { call, delay, put, takeLatest } from "redux-saga/effects";
 import { counterSliceActions } from "./counterSlice";
+import { getUsers } from "./api";
+
+function* getUserSaga() {
+  try {
+    const users = yield call(getUsers);
+
+    yield delay(3000);
+
+    console.log("getUserSaga ::::::::::", users);
+
+    yield put({
+      type: counterSliceActions.getUserSuccess,
+      payload: users.data,
+    });
+  } catch (error) {
+    yield put({
+      type: counterSliceActions.getUserFailure,
+      payload: "Error",
+    });
+  }
+}
+
+export function* watchGetUser() {
+  yield takeLatest(counterSliceActions.getUser, getUserSaga);
+}
 
 function* incrementSaga() {
   try {
