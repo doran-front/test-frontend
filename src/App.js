@@ -4,9 +4,12 @@ import Counter from "./dongsu/Counter";
 
 function App() {
   return (
+<<<<<<< HEAD
+=======
     <>
       <Counter />
     </>
+>>>>>>> main
   );
 }
 
