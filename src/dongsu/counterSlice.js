@@ -7,8 +7,26 @@ export const counterSlice = createSlice({
     isDone: false,
     number: 0,
     error: null,
+    users: [],
   },
   reducers: {
+    getUser: (state, action) => {
+      state.isLoading = true;
+
+      console.log("getUser실행:::::::::", action.payload);
+    },
+    getUserSuccess: (state, action) => {
+      state.isLoading = false;
+      state.users = action.payload;
+
+      console.log("getUserSuccess::::::", action.payload);
+    },
+    getUserFailure: (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+
+      console.log("getUserFailure::::::", action.payload);
+    },
     increment: (state) => {
       state.isLoading = true;
       state.isDone = false;
