@@ -1,9 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Counter from "./dongsu/Counter";
 
 function App() {
   return (
+<<<<<<< HEAD
+=======
+    <>
+      <Counter />
+    </>
+>>>>>>> main
   );
 }
 
